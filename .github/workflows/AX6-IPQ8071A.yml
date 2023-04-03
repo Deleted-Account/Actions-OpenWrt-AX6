@@ -22,10 +22,14 @@ env:
   CONFIG_FILE: AX6/AX6.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
+  DIY_P3_SH: diy-part3.sh
 #  MRG_ADD_SH: x86_64/x86_64.sh
 #   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_BIN_DIR: true
+  UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: true
+  UPLOAD_WETRANSFER: false
+  UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
   FILE_NAME: AX6-IPQ8071A
   PRODUCT_NAME: AX6-IPQ8071A
@@ -64,7 +68,7 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-        df -Th
+#        df -Th
         
     - name: Check server performance
       run: |
@@ -119,8 +123,10 @@ jobs:
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
+        chmod +x $DIY_P3_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
         sed -i 's/OpenWrt/MRG AutoBuild ${{ env.DATE1 }} @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
 
     - name: SSH connection to Actions
