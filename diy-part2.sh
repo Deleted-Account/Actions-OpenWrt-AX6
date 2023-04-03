@@ -11,7 +11,7 @@
 #
 
 # 修改openwrt登陆地址,把下面的192.168.31.1修改成你想要的就可以了
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把XXKDB-R4A修改你喜欢的就行（不能纯数字或者使用中文）
 #sed -i '/uci commit system/i\uci set system.@system[0].hostname='R-AX6'' package/lean/default-settings/files/zzz-default-settings
@@ -37,11 +37,11 @@ sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ caicai /g' packag
 #echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/img_cdn/js/ginkgo-leaf.js\"></script>' >> /usr/lib/lua/luci/view/footer.htm" >> package/lean/default-settings/files/zzz-default-settings
 
 # 嵌入看板娘
-echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/live2d-mini/autoload.js\"></script>' >> /usr/lib/lua/luci/view/footer.htm" >> package/lean/default-settings/files/zzz-default-settings
+#echo "echo '<script src=\"https://cdn.jsdelivr.net/gh/XXKDB/live2d-mini/autoload.js\"></script>' >> /usr/lib/lua/luci/view/footer.htm" >> package/lean/default-settings/files/zzz-default-settings
 
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-echo "" >> package/lean/default-settings/files/zzz-default-settings
-echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
+#echo "" >> package/lean/default-settings/files/zzz-default-settings
+#echo "" >> package/lean/default-settings/files/zzz-default-settings
+#echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
 
 
 #删除原默认主题
@@ -83,9 +83,9 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 #----------------------------------------------#----------------------------------------------#
 
 #修正连接数（by ベ七秒鱼ベ）
-sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
-#更改红米AX6的默认密码为无密码
-sed -i "s|^root|root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::|g" package/base-files/files/etc/shadow
+#sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+#更改红米AX6的默认密码为password
+#sed -i "s|^root|root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::|g" package/base-files/files/etc/shadow
 
 #----------------------------------------------#----------------------------------------------#
 
