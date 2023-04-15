@@ -1,4 +1,5 @@
-# Actions-OpenWrt
+
+# Actions-OpenWrt-Xiaomi-AX6
 
 Build OpenWrt and publish docker image using GitHub Actions.
 
@@ -23,7 +24,6 @@ You need to add 5(at least the first one) secrets to make Actions work properly.
 
 [P3TERX大佬写的中文教程|Usage Guide in Chinese](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
-# 使用
 
 ## 1.Fork
 
@@ -100,10 +100,10 @@ rm -f .config.old && make defconfig && ./scripts/diffconfig.sh > seed.config && 
 ![批注 2021-08-05 115225](https://user-images.githubusercontent.com/45261780/128301252-f054fa0a-6544-4770-8e99-217946f9b692.png)
 ![批注 2021-08-05 115238](https://user-images.githubusercontent.com/45261780/128301319-5b6969b1-94e5-43f7-97c7-6f69acbd92ec.png)
 
-## 3.6 下载固件
+## 2.4 下载固件
 一般两个小时左右编译完成
 ![](https://gitee.com/Unkaer/blog/raw/master/images/material/20210307211649.webp)
 
-## 3.7 刷入体验
+## 2.5 刷入体验
 第一次要断电，按住`reset`键，再插入电源，等待5秒，浏览器访问 192.168.1.1 ，就进入 breed界面，进行升级
 之后的更新升级，都可以在 `系统`->`备份/升级`里面刷入新的固件
