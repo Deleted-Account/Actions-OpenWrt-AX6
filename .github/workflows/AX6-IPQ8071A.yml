@@ -12,8 +12,8 @@ on:
     - cron: 10 16 * * *
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/1715173329/imoutowrt
+  REPO_BRANCH: ax3000-5.15
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: AX6/AX6.config
   DIY_P1_SH: diy-part1.sh
@@ -207,7 +207,7 @@ jobs:
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
           默认IP： 10.0.0.1 默认密码： password
-          当前使用版本:【编译前的最后一次[➦主源码](https://github.com/coolsnowwolf/lede)更新记录】
+          当前使用版本:【编译前的最后一次[➦主源码](https://github.com/1715173329/imoutowrt)更新记录】
           ${{ env.useVersionInfo }}
         artifacts: ${{ env.FIRMWARE }}/*
 
