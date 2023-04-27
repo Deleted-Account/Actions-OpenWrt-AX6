@@ -46,9 +46,9 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 #删除原默认主题
 #rm -rf package/lean/luci-theme-argon
-#rm -rf package/lean/luci-theme-bootstrap
-#rm -rf package/lean/luci-theme-material
-#rm -rf package/lean/luci-theme-netgear
+rm -rf package/lean/luci-theme-bootstrap
+rm -rf package/lean/luci-theme-material
+rm -rf package/lean/luci-theme-netgear
 rm -rf package/kenzo/luci-theme-ifit
 
 #下载主题luci-theme-argon
