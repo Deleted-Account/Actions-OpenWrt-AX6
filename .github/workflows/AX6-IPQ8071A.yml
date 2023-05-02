@@ -96,6 +96,8 @@ jobs:
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 #        echo "::set-env name=useVersionInfo::$useVersionInfo"
 #        echo "::set-env name=DATE::$(date "+%Y-%m-%d %H:%M:%S")"
+#        sed -i 's/OpenWrt/MRG AutoBuild ${{ env.DATE1 }} @ OpenWrt/g' package/lean/default-settings/files/zzz-default-settings
+
 
     - name: Load custom feeds
       run: |
@@ -122,6 +124,7 @@ jobs:
         cd openwrt
 #        $GITHUB_WORKSPACE/$DIY_P2_SH
 #        $GITHUB_WORKSPACE/$DIY_P3_SH
+
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
