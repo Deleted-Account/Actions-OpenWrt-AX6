@@ -17,8 +17,7 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 #sed -i '/uci commit system/i\uci set system.@system[0].hostname='R-AX6'' package/lean/default-settings/files/zzz-default-settings
 
 # 版本号里显示一个自己的名字（ababwnq build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些都是后增加的）
-#sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ caicai /g' package/lean/default-settings/files/zzz-default-settings
-
+sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ caicai /g' package/lean/default-settings/files/zzz-default-settings
 
 #更改主机型号，支持中文。 
 #sed -i 's/model = "Redmi AX6"/model = "红米AX6路由"/g' target/linux/ipq807x/files/arch/arm64/boot/dts/qcom/ipq8071-ax6.dts
@@ -46,7 +45,7 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 
 #删除原默认主题
-#rm -rf package/lean/luci-theme-argon
+rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-theme-bootstrap
 rm -rf package/lean/luci-theme-material
 rm -rf package/lean/luci-theme-netgear
@@ -55,11 +54,11 @@ rm -rf package/kenzo/luci-theme-ifit
 #下载主题luci-theme-argon
 git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
 git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
-#git clone https://github.com/Joecaicai/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/Joecaicai/luci-theme-argon.git package/lean/luci-theme-argon
 
 # 修改luci-theme-argon_armygreen主题渐变色，16进制RGB
 #登录页面背景颜色+半透明
-#sed -i 's/#f7fafc/rgba(134,176,197, .5)/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
+sed -i 's/#f7fafc/rgba(134,176,197, .5)/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
 
 #渐变色开始
 #sed -i 's/#f9ffff/#80ABC3/g' package/lean/luci-theme-argon_armygreen/htdocs/luci-static/argon_armygreen/css/style.css
@@ -80,7 +79,7 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
-# sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 #----------------------------------------------#----------------------------------------------#
 
