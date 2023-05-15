@@ -53,7 +53,7 @@ rm -rf package/kenzo/luci-theme-ifit
 
 #下载主题luci-theme-argon
 #git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
-git clone https://github.com/YL2209/luci-theme-ifit.git package/lean/luci-theme-ifit
+git clone https://github.com/Joecaicai/luci-theme-ifit.git package/lean/luci-theme-ifit
 git clone https://github.com/Joecaicai/luci-theme-argon.git package/lean/luci-theme-argon
 
 # 修改luci-theme-ifit主题渐变色，16进制RGB
