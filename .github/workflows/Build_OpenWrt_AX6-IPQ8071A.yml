@@ -41,7 +41,6 @@ env:
   PRODUCT_NAME: AX6-IPQ8071A
 
 jobs:
-  job_init: 
     runs-on: ubuntu-latest
     name: Build-Openwrt-Init
     outputs:
