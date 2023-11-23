@@ -55,7 +55,7 @@
 #git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
 #git clone https://github.com/Joecaicai/luci-theme-ifit.git package/lean/luci-theme-ifit
 #git clone https://github.com/Joecaicai/luci-theme-argon.git package/lean/luci-theme-argon
-
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 # 修改luci-theme-ifit主题渐变色，16进制RGB
 #登录页面背景颜色+半透明
 sed -i 's/#f7fafc/rgba(134,176,197, .5)/g' package/lean/luci-theme-ifit/files/htdocs/css/style.css
