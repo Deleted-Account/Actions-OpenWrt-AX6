@@ -20,6 +20,8 @@
 # 添加插件源码
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git immortalwrt https://github.com/immortalwrt/packages' feeds.conf.default
+
 sed -i '$a src-git sirpdboy https://github.com/sirpdboy/sirpdboy-package' feeds.conf.default
+sed -i '$a src-git autotimeset  https://github.com/sirpdboy/luci-app-autotimeset' feeds.conf.default
 # passwall依赖
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
