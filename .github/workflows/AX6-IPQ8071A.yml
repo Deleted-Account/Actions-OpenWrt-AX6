@@ -13,8 +13,10 @@ on:
   #   - cron: 15 21 2-28/5 * *
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  # REPO_URL: https://github.com/coolsnowwolf/lede
+  # REPO_BRANCH: master
+  REPO_URL: https://github.com/TerryLip/AX6NSS.git
+  REPO_BRANCH: qualcommax-6.1-nss-wifi
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: AX6/AX6.config
   DIY_P1_SH: diy-part1.sh
